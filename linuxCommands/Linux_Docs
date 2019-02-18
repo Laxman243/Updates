@@ -1,0 +1,402 @@
+Linux_Distribution
+-------------------
+1)A Linux distribution is a collection of (usually open source) software on top of a Linux kernel
+
+2) A distribution (or short, distro) can bundle server software, system management tools, documentation and many desktop applications in a central secure software repository.
+
+3) A distro aims to provide a common look and feel, secure and easy software management and often a specific operational purpose.
+
+
+Let's take a look at some popular distributions
+
+2.1. Red Hat
+2.2. Ubuntu
+2.3. Debian
+2.4. Other
+
+2.5. Which to choose ?
+1)Below are some very personal opinions on some of the most popular Linux Distributions
+
+2)Keep in mind that any of the below Linux distributions can be a stable server and a nice graphical desktop client
+
+Table 2.1. choosing a Linux distro
+-----------------------------------
+
+
+
+When you are new to Linux in 2015, go for the latest Mint or Fedora. If you only want to practice the Linux command line then install one Debian server and/or one CentOS server (without graphical interface).
+
+Here are some links to help you choose:
+distrowatch.com 
+redhat.com centos.org 
+debian.org 
+www.linuxmint.com
+
+7. man pages (Manual page)
+--------------------------
+man $command
+man $configfile
+man $daemon
+man -k
+whatis
+whereis
+man sections
+man $section $file
+man man
+mandb
+
+1)man $command : 
+Type man followed by a command (for which you want help) and start reading. Press q to quit the manpage. Some man pages contain examples (near the end).
+
+
+2)man $configfile :
+Most configuration files have their own manual.
+
+3)man $daemon :
+This is also true for most daemons (background programs) on your system..
+
+4)whatis :
+to see jsut description of manual page
+
+5)whereis : location of a manpage can be revealed
+
+WORKING WITH DIRECTORIES
+-------------------------
+pwd, cd, ls, mkdir, rmdir
+
+
+rmdir : remove empty directory
+rmdir -p : remove directory recursively
+
+practice:
+========
+1)Display your current directory  -> pwd
+
+2)change to the etc./directory   --> cd ..  | cd ../
+
+3)now change to your home directory using only three key press  ==> cd
+
+4)go to the parent directory of the current directory  => cd ../
+
+5) ls -l
+
+6)ls
+
+7)ls directoryname
+
+8)ls bin sbin
+
+9)ls -a
+
+10)mkdir
+
+11)ls -lh
+
+12)rmdir <name>
+
+
+
+WORKING WITH FILES
+-------------------
+file, touch, rm , cp, mv, rename
+
+all files are case sensitive
+-----------------------------
+everything is a file, a directory is a special kind of file. 
+
+file: The file utility determines the file type. linux does not use extensions to determine the file type.
+
+1)touch -t : set some properties while creating empty file.
+
+2)rm : remove forever
+
+3)rm -i : To prevent yourself accidently removing a file, it will ask you before deleting the file
+
+4)rm -rf : bu default, rm -rf will not remove non-empty directories , but it contains more options
+
+5)cp <source> <destination> : both you can do file and directory
+
+6)cp -r : To copy complete directories, 
+   r : recursively copying of all files in all subdirectories
+
+7)copy multiple files to directory
+
+cp file1 file2.copy sindisck
+
+
+mv
+--
+mv : move (or) rename
+
+mv -i : also has a -i switch similar to cp and rm.
+
+mv -i : will ask permission to overwrite an existing file.
+
+
+CP:10 Working with file content
+--------------------------------
+
+text files, head ,tail, cat , tac , more , less and strings
+
+head : displays first ten lines of file
+tail : displays last ten lines of file
+
+cat : is one of most universal tools, it copy standard input to standard output.
+
+eaxample:
+========
+cat one>part1
+cat two>part2
+
+cat part1 part2
+
+cat part1 part2>all
+
+cat all
+
+
+
+creats files
+------------
+
+also we can use cat to create file text files.
+
+cat >winter.txt
+
+CUSTOM END MAKER
+-----------------
+end marker for cat with << 
+this construction is called a here directive
+and will end the cat command.
+
+cat >one.txt <<stop
+
+
+COPY FILES
+-----------
+cat is also copy the files
+
+cat cold.txt
+
+tac
+----
+it added the files in reverse order 
+
+example
+paul@debian8:~$ cat count 
+one 
+two 
+three 
+four 
+
+paul@debian8:~$ tac count 
+four 
+three 
+two 
+one
+
+
+STRINGS
+-------
+with ths string command you can display readable ascii strings found in (binary) files.
+
+THE LINUX FILE TREE
+====================
+Type man hier --> onto your terminal you will get all the details about filesystem hierarchy standard
+
+
+ /   forward slash -> root directory
+
+
+
+ CONFIGURATION DIRECTORIES
+ --------------------------
+ /boot directory contains all files needed to boot the computer.
+2). These files don't change very often
+3) On Linux systems you typically find the /boot/grub directory here
+4) /boot/grub contains /boot/grub/grub.cfg (older systems may still have /boot/grub/grub.conf) which defines the boot menu that is displayed before the kernel starts.
+
+./etc 
+-----
+1)All of the machine-specific configuration files should be located in /etc
+
+IN - MEMORIES DIRECTORIES
+-------------------------
+/dev --> ordinary files. not actually located on the hard disk
+
+
+
+19) ./var variable data
+------------------------
+1)Files that are unpredictable in size
+2) such as log, cache and spool files, should be located in /var.
+
+
+			SHELL EXPANSION
+			---------------
+
+commands and arguments
+control operators
+shell variable
+shell embedding and options
+shell history
+file globbing
+
+bash (bourne again shell)
+
+COMMAND
+--------
+echo : cmd to demonstrate shell features
+it echoes the input that is recevies
+
+Arguments
+---------
+One of the primary features of a shell is to perform a command line scan
+ When you enter a command at the shell's command prompt and press the enter key, 
+ then the shell will start scanning that line, cutting it up in arguments.
+ . While scanning the line, the shell may make many changes to the arguments you typed.
+
+ This process is called shell expansion. When the shell has finished scanning and modifying that line, then it will be executed.
+
+
+white space removal
+-------------------
+
+single quotes: you can prevent the removal of white spaces by quoting the spaces
+
+ex : echo 'A line with the    single quote'
+
+also you can prevent by using Double quotes " "
+
+ECHO AND QUOTES
+================
+
+
+Type 
+ ----
+ to find out whether a cmd given to shell will be exevuted as an external cmd or intrnal cmd
+
+ type cd 
+ type ls
+
+
+ RUNNING EXTERNAL COMMANDS
+ ---------------------------
+
+
+ WHICH
+ =====
+ cmd will search for binaries in the $PATH environment variable
+
+
+ aliases
+ =======
+ create an alise
+
+ cat count.txt
+ alias dog=cat
+
+CONTROL OPERATORS
+-----------------
+ ; semicolon
+
+ u can put two or more commands on the same line 
+ ex; echo hello ; echo world
+
+ & ampersand
+ -----------
+ when a line is end with & , the shell will not wait for the command to finish
+ you will get your shell prompt back and the cmd is executed in background.
+
+ $? 
+ . Actually $? is a shell parameter and not a variable, since you cannot assign a value to $?.
+
+&& logical and
+
+|| Logical OR
+
+
+# pound sign : everything writtern after a pound sign is ignored by the shell.
+
+\  escaping special character
+
+
+
+SHELL VARIABLE
+--------------
+$   $varname
+case sensitive
+creating variable 
+Myvar=5555
+echo $Myvar
+
+echo "Myvar"  == o/p = 555
+echo 'Myvar'  == o/p = Myvar
+
+
+set ==>
+to display a list of env variables
+
+unset ==> remove a variable from your shell env
+
+env ==> will display a list of exported variables
+
+
+
+example:
+--------
+
+!! --> repeating the last command
+!to  --> repeating the command followed by one or more characters.
+
+history n  --> to see the history 
+
+!n --> repeat the specific command followed by number
+
+cltr+r -> to search in the history
+
+$HISTSIZE
+echo $HISTSIZE --> determines the no of cmd that will be remembered your current enviroment
+
+$HISTFILESIZE
+
+
+
+17) FILE GLOBBING :
+===================
+The shell is also responsible for file globbing(dynamic filename generation)
+
+* 
+
+PIPES AND COMMANDS
+==================
+
+I/O Directrions
+---------------
+stdin, stdout, and stderr
+output redirection
+error redirection
+output redirection and pipes
+joining stdout and stderr
+input redirection
+confusing redirection
+quick file clear
+
+
+One of the powers of the unix command lines is the use of input/output redirection and pipes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

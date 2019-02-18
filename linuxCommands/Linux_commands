@@ -1,0 +1,58 @@
+FILE_COMMANDS
+--------------
+
+1) ls   : #lists your files in current directory.
+
+2) ls -l : #lists your files with long description.
+
+3) ls -a  : # lists your files with hidden files also
+
+4) ls -s <filename> <link> : #creates a ssymbolic link to file.
+
+5)touch <filename> :# creates or updates your file.
+
+6)cat <filename> :#prints the file raw content (will not be interpreted).
+
+7)any_command  > <filename> : # '>' is used to perform redirections, it will set any_command's stdout to file instead of real stdout 
+
+8)more  <filename> :#shows the first part of a file (define:10lines).
+
+9)head <filename> : #output the first line of the file
+
+10)tail <filename> : #outputs the last lines of a file
+
+11) vim <filename>   : #opens a file in VIM (VI improved) text editor, will create if it does'nt exists.
+
+12) mv <filename> <dest> : #move file from one place to another.
+
+13) cp <filename> :#copies a file
+
+14) rm <filename> : #removes a file
+
+15) diff <filename1> <filename2> : #comparission b/w two files
+
+16)wc <filename> :#tells how many lines, words, characters are there in fils.
+
+17)chmod -options <filename>     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
+
+18)ls -lhs :# to view the file permission on specific files.
+
+19)gzip <filename> : #compresses files using gzip algorithm.
+
+20)gunzip <filename> : #uncompresses files compresses by gzip
+
+21)gzcat <filename> : #lets you look at gzipped file without unzipping the file.
+
+22)lpr: # prints the file
+
+23)lqp    check out the print queue
+
+24)lprm <jobnumber> : #remove something from the printer queue.
+
+25)genscript  : converts plain text files into postscript for printing and gave you somethings for formatting
+
+26)dvips :#prints .dvi files
+
+27)grep -r <filename> : search recursively for pattern in directory
+
+28)grep <pattern> <filename> : #looks for the string

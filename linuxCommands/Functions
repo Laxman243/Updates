@@ -1,0 +1,8 @@
+FUNCTIONS
+----------
+function hello(){
+	commands	
+}
+
+unset -f function #delete a function definition
+declare -f #displ

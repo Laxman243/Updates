@@ -1,0 +1,22 @@
+Process_Handling_Commands
+-------------------------
+To suspend a job, type CLTR+Z while it is running. you can also suspend a job with CLTR+Y
+
+CLTR+Z : in that the process is only stopped when it attempts to read input from terminal.
+
+CLTR+C , to interrupt a job.
+
+1) myCommand & : #runs job in the background and prompts back to shell
+
+2)jobs  : #lists all jobs (use with -l to see associated PID).
+
+3)fg  : # brings background into foreground.
+
+4) kill -l : #returns a list of all signals on the system
+
+5)kill PID : # terminates process with specific PID
+
+6)ps : prints a line of information about the current running 
+
+7)wait  :# waits untill all background jobs have finished.
+

@@ -1,0 +1,16 @@
+To go inside file using VI text editor
+
+type cmd:
+---------
+vi <filename>
+
+if vim is not install then install it on your system.
+
+to go out from the vi text editor.
+
+1)press esc
+2)colon :
+3) type q!
+and then hit enter.
+you will be out of the vi text editor.
+

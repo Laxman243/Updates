@@ -1,0 +1,17 @@
+Bash Commands
+--------------
+
+1) env 		:#displayes all environment variables
+
+2)echo $SHELL  : #displayes the shell you're using
+
+3)echo $SHELL_VERSION  :#displays bash version
+
+4)bash 				   :#if you want to use bash
+
+5)whereis bash         : #find out where bash is on your system
+
+6)which bash    :#find out which program is executed as 'bash'
+
+7)clear    #clear content on windows
+
